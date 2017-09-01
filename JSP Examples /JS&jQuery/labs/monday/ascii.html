@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASCIImation</title>
+    <link rel="stylesheet" href="ascii.css">
+    <script src="animation.js"></script>
+    <script src="ascii.js"></script>
+</head>
+<body>
+
+<h1 class="heading">
+    ASCIImation.
+</h1>
+
+<div class="main">
+    <textarea title="animate" name="textarea" id="textarea" cols="80" rows="20"></textarea>
+    <fieldset>
+        <legend>Play Controls:</legend>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Animation:</legend>
+        <select name="select" id="select" title="select">
+            <option value="blank">Blank</option>
+            <option value="exercise">Exercise</option>
+            <option value="juggler">Juggler</option>
+            <option value="bike">Bike</option>
+            <option value="dive">Dive</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Size:</legend>
+        <select name="size" title="size" id="size">
+            <option value="7">Tiny</option>
+            <option value="10">Small</option>
+            <option value="12">Medium</option>
+            <option value="16">Large</option>
+            <option value="24">Extra Large</option>
+            <option value="32">XXL</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Speed:</legend>
+        Turbo:<input type="checkbox" id="speed" title="speed">
+    </fieldset>
+</div>
+
+<div class="validate">
+    <a href="http://validator.w3.org/check/referer" target="_blank">
+        <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png"
+             alt="Validate"/>
+    </a> <br>
+
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss"
+             alt="Valid CSS!"/></a> <br>
+
+    <a href="https://webster.cs.washington.edu/jslint/?referer" target="_blank">
+        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS"/>
+    </a>
+</div>
+
+</body>
+</html>

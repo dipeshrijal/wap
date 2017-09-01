@@ -1,0 +1,67 @@
+1. What is the main value of Java Server Pages?
+=> JSP is responsible for allowing to insert java code in HTML to make more dynamic with the help of JSP tags.
+
+2. How are JSP pages related to servlets?
+=> When client request for JSP page, the JSP engine ﬁrst checks whether the page is compiled into java class or not. If not, the JSP is translated
+   into servlet. Then, the servlet is compiled into java class to produce the response.
+
+3. How are JSP pages related to HTML?
+=> JSP includes html with a little java. JSP runs on the server and HTML on the browser.
+
+4. Give an example of a JSP scriptlet and show how it will look in the JSP servlet.
+=> JSP Scriptlet
+   <body><html><% out.print("welcome" + name) %></body></html>
+
+   JSP Servlet
+   out.println("<html><body>");
+   out.println("welcome" + name);
+   out.println("</body></html>);
+
+5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+=> JSP Declaration
+   <body><html><%! int count = 0; %></body></html>
+
+   JSP Servlet
+   out.println("<html><body>");
+   int count = 0;
+   out.println("</body></html>);   
+
+6. Give an example of a JSP comment and show how it will look in the JSP servlet.
+=> JSP Comment
+   <%-- comment --%>
+
+   JSP Servlet
+   // comment
+
+7. Give an example of a JSP expression and show how it will look in the JSP servlet.
+=> JSP Expression
+   <% count++ %>
+
+   JSP Servlet
+   out.println(count++);
+
+
+8. Give an example of a JSP directive and show how it will look in the JSP servlet.
+=> JSP Directive
+   <%@ page import="java.uti|.*" %>
+
+   JSP Servlet
+   import java.uti|.*;
+
+9. Explain how an EL expression is evaluated.
+=> ${value}: container evaluates this as follows:
+ 	checks page scope for an attribute named "value",
+ 		if found use it.
+	otherwise check request scope for an attribute named "value",
+ 		if found use it.
+ 	otherwise check session scope for an attribute named "value",
+ 		if found use it.
+ 	othenrvise check application scope for an attribute named "value",
+ 		if found use it.
+ 	otherwise ignore the expression.
+
+10. Explain how servlet attributes are involved in EL expressions.
+=>  EL expressions assume that the first identiﬁer in the expression is the key of a servlet attribute, and searches through the different attribute 	 scopes using that key.
+
+11. Explain how servlets and JSPs use request dispatch to interact.
+=>  The servlet asks the HttpRequest for RequestDispatcher, passing in a relative path to the view JSP using getRequestDispatcher() method. Then 	again, it calls fonNard() method on the RequestDispatcher, to tell the JSP to take over the request.

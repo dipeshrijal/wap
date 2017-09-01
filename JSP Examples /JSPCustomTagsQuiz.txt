@@ -1,0 +1,38 @@
+1. Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL forEach.
+=> 	<table>
+
+		<% Studentl] table = (Studentl]) request.getAttributes(“students");
+		for(Student student : table) { %>
+
+		<tr>
+
+			<td> <%= student.getName() %> </td>
+
+			<td> <%= student.getAge() %> </td>
+
+		</tr>
+
+		<% } %>
+
+	</table>
+
+2. How do custom tags relate to JSTL?
+=> They are all jsp actions. JSTL is a standard library of JSP actions, but JSP allows developers to create their own actions, component development   		creates custom functionality that can be packaged and reused by content developers.
+
+3. What is the role of the URI in the TLD and the taglib directive?
+=> It is a unique identiﬁer for a set of custom tags. It allows the container to find the TLD for the tags in that taglib directive. The uri attribute 		value resolves to a location that container understands and the preﬁx attribute informs a container what bits of markup are custom actions.
+
+4. What is a tag handler class?
+=> A Java class that extends SimpleTagSupport and overrides doTag method to generate the markup for the tag. It should have setters for each 		attributes in the tag.
+
+5. What is the role of attribute setters in a tag handler class?
+=> Your custom tags can deﬁne any number of attributes that can be speciﬁed from the JSP page. You can use these attributes to pass information to the 		tag handler and customize its behavior. You declare each attribute name in the TLD, in the <attribute> element. so Your tag handler must 	implement setter and getter methods based on the attribute name and The JSP engine invokes the setter methods for each attribute appropriately 		after the tag handler is initialized and before the doStartTag() method is called.
+
+6. What is the role of the doTag() method in a tag handler class?
+=> The role of doTag() method is to generate the markup for the tag, render custom tag.
+
+7. What does the operation getJspContext().getOut().write(“Hi Bob”) do when called in a doTag() method?
+=> It will print “Hi Bob” to the output stream.
+
+8. What does the operation getJspBody().invoke(null) do when called in a doTag() method?
+=> This method process the body of the tag and print it to the response. The null argument means the output goes to the response rather than same 	other writer we pass in.

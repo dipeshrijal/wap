@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<!-- CSE 190 M Homework 4 (NerdLuv) -->
+<!-- shared page top HTML -->
+
+<head>
+    <title>Retrive Grade</title>
+    <meta charset="utf-8"/>
+    <link href="css/nerdluv.css" type="text/css" rel="stylesheet"/>
+    <link href="css/exercise1.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+    <h1>Retrive Your Grade</h1>
+    <form method="post" action="http://mumstudents.org/params.php">
+        <fieldset>
+            <div>
+                <label> <strong>Name:</strong></label>
+                <input id="name" name="name">
+            </div>
+
+            <div>
+                <label><strong>ID:</strong></label>
+                <input id="id" name="id">
+            </div>
+
+            <div>
+                <label><strong>Assignment:</strong></label>
+                <select name="assignment">
+                    <option value="assignment1" selected>Assignment 1</option>
+                    <option value="assingment2">Assignment 2</option>
+                    <option value="assignment3">Assignment 3</option>
+                </select>
+            </div>
+
+            <div class="form-controls">
+                <label><strong>Year:</strong></label>
+                <label>
+                    <input class="" id="2011" type="radio" name="year" value="2011"> 2011
+                </label>
+
+                <label>
+                    <input class="" id="2012" type="radio" checked name="year" value="2012">2012
+                </label>
+
+                <label>
+                    <input type="radio" name="year" value="2013">2013
+                </label>
+            </div>
+
+            <div>
+                <label for="check">
+                    <input type="checkbox" name="agree" id="check"> I agree that I only lookup for my own grade.
+                </label>
+            </div>
+
+            <div>
+                <input type="submit" value="Get Grade">
+            </div>
+
+
+        </fieldset>
+    </form>
+</div>
+
+<hr>
+<footer>
+    <a href="https://webster.cs.washington.edu/validate-html.php">
+        <img src="img/signup/w3c-html5.png" alt="Valid HTML"/>
+    </a>
+    <a href="https://webster.cs.washington.edu/validate-css.php">
+        <img src="img/signup/w3c-css.png" alt="Valid CSS"/>
+    </a>
+</footer>
+</body>
+</html>

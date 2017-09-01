@@ -1,0 +1,18 @@
+
+Bug 1:
+
+The file name is not correct. The name should be buggy.js instead of bugyy.js.
+
+
+Bug 2:
+
+The script tag is not closed correctly. and the method onclick spelling is also incorrect.
+
+Bug 3: 
+
+There is a semicolon after the function parentheses which is not valid. and the a in the alert is capitalized which is invalid function in JS.
+
+
+Bug 4:
+
+The if statement in the function somethingElse is not closed properly.

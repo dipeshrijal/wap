@@ -1,0 +1,71 @@
+Javascript Scope Exercises
+
+1. Determine what this Javascript code will print out (without running it):
+x = 1;
+var a = 5;
+var b = 10;
+var c = function(a, b, c) {
+    var x = 10;
+    document.write(x); // prints 10
+    document.write(a); // prints 8
+    var f = function(a, b, c) {
+        b = a;
+        document.write(b); // prints 8
+        b = c;
+        var x = 5;
+    }
+    f(a,b,c);
+    document.write(b); // prints 9
+}
+c(8,9,10);
+document.write(b); // prints 10
+document.write(x); // prints 1
+
+=> Output = 10889101
+
+2. What is the difference between a method and function?
+=>  A method is a piece of code which is called by a name and is associated with objects but function is a piece of code which is called by it name and not associated to any objects.
+
+3. What does 'this' refer to when used in a Java method?
+=> 'this' refers to the reference to the current object in Java method.
+
+4. What does 'this' refer to when used in a JavaScript method?
+=> 'this' refers to the object which owns the piece of code being executed in JavaScript.
+
+5. What does 'this' refer to when used in a JavaScript constructor function?
+=> 'this' referes to the constructor object in JavaScript.
+
+6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+When f is called by x.f( ), what does 'this' refer to?
+=> 'this' refers to the object x in JavaScript.
+
+7. What is a free variable in JavaScript?
+=> Variables that are used locally, but defined in an enclosing scope
+
+8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+=>
+var obj = {
+    name: "Fred",
+    major: "Music",
+    compare: function(x, y) {
+        if(x === y) {
+            return x * y;
+        } else {
+            return (x < y ? x : y);
+        }
+    }
+}
+
+9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
+Employee objects have the following fields: name, salary, position.
+=>
+function Employee (name, salary, position) {
+    this.name = name;
+    this.slary = salary;
+    this.position = position;
+}
+
+var Employee = new Employee("Dipesh", 100000, "Manager");
+var Employee2  = new Employee("John", 120000, "Editor");
+var Employee3 = new Employee("Jane", 200000, "CEO");

@@ -1,0 +1,15 @@
+.form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.controls {
+    padding: 5px;
+}
+
+.validate {
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

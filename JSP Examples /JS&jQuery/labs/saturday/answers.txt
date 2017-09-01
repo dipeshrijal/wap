@@ -1,0 +1,20 @@
+1. The function without parenthesis calls the function after 2 seconds but the function with parenthesis calls the function instantaneously.
+
+2. Both alert displays 6.
+
+3. function booyah1() {
+    alert("BOOYAH!");
+}
+
+function booyah2() {
+    alert("BOOYAH!");
+}
+
+setTimeout(booyah1, 2000);
+setTimeout(booyah2, 2000);
+
+4. Unobtrusive Javascript means separation of javascript from HTML and make use of DOM to execute all javascript functions.
+The practical application of Unobstrusive Javascript are:-
+- It makes debugging very easy as all the function are on a same file.
+- It enables clean code as it separates content(HTML), presentation(CSS), and behaviour (Javascript) from the web pages.
+- Maintaining the code is very easy.

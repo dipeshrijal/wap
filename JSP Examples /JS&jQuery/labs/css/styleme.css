@@ -1,0 +1,48 @@
+html {
+    background: url("../img/bg.jpg") repeat center center fixed;
+}
+
+.name {
+    background: #009688;
+    text-align: center;
+}
+
+.home {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    background: #009688;
+    color: #fff;
+    text-align: justify;
+}
+
+.mylist {
+    list-style-type: lower-roman;
+}
+
+.course {
+    color: #D81B60;
+}
+
+.show {
+    color: #311B92;
+}
+
+.description {
+    color: #0D47A1;
+    text-align: center;
+}
+
+.text {
+    color: #388E3C;
+}
+
+.caps {
+    color: #903;
+    font-family: Georgia;
+    font-size: 25px;
+}
+
+

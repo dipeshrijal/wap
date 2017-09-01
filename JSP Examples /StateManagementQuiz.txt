@@ -1,0 +1,40 @@
+1. Can post requests be bookmarked? What are the problems?
+=> No, the post request cannot be bookmarked. Since, the bookmark only consists of URL all the form parameters are lost.
+  
+2. What is the purpose of request dispatching?
+=> Request Dispatcher enables to dispatch the request to another resources like HTML, JSP, or Servlet.
+
+3. What is the difference between redirect and request dispatch?
+=> Request Dispatch allow to do the server side forward along with the request data but redirect is the client side redirect.
+
+4. What is an attribute?
+=> An attribute is an object which can be set, get or removed from any one of the request scope or session scope or application scope.
+
+5. What is the difference between attributes and parameters?
+=> Attributes are an object which are used in server side usage which can be used within the same request but parameters are the values which are 	passed to the server from the client side. 
+
+6. What are dangers of using attributes?
+=> Attributes are not thread safe because it is shared by every requests and servlets.
+
+7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+=> Http is stateless because every time a new request is generated for each request and is not capable of storing any previous data. TCP protocol is 	stateful protocol.
+
+
+8. Give 5 different methods for maintaining state information (count each attribute scope as one method).
+=> 1. Request Scope available for single request.
+   2. Session Scope available for a single user until the user closes the browser.
+   3. Application Scope availble until the container is destroyed.
+   4. Cookies saved on the client side i.e. browser. available until the user closes the browser.
+   5. Hidden fields on form.
+
+9. How long does a session last?
+=> A session last until the user closes the browser.
+
+10. What is a cookie, and how long does a cookie last?
+=>  Cookie is a small piece of information store in a user's browser. The temporary cookie last until the user closes the browser and the permanent 	cookie lasts depending the expiration time set.
+
+11. What is the purpose of URL rewriting?
+=>  URL rewriting is an alternative way of passing the data if the user disables the cookies and also extra form submission is not required on each 	page.
+
+12. Why does the request attribute report ‘null’ for the maintaining state demo?
+=>  The request attribute report 'null' for maintaining state demo because a new request object is created for each request.
